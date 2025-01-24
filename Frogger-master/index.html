@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frogger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h3>Lives: <span id="lives">3</span></h3>
+        <h3>Score: <span id="score">0</span></h3>
+        <h3>Seconds left: <span id="time-left">20</span></h3>
+        <h3>Result: <span id="result"></span></h3>
+        <button id="start-pause-button">Start/Pause</button>
+        <select id="theme-selector">
+            <option value="day">Day</option>
+            <option value="night">Night</option>
+        </select>
+        <div class="grid"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

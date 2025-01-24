@@ -1,0 +1,109 @@
+/* Center the entire game */
+body {
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	background: linear-gradient(180deg, #74b9ff, #00cec9);
+	color: #ffffff;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+  }
+  
+  /* Header Section Styling */
+  .header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30px; /* Space between elements */
+	margin-bottom: 20px;
+  }
+  
+  /* Score and Timer */
+  h2 {
+	font-size: 24px;
+	margin: 0;
+	font-weight: 600;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	color: #ffffff;
+  }
+  
+  /* Button Styling */
+  button {
+	background: #0984e3;
+	color: #ffffff;
+	font-size: 18px;
+	border: none;
+	border-radius: 10px;
+	padding: 10px 30px;
+	cursor: pointer;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+	transition: transform 0.2s, background 0.3s;
+  }
+  
+  button:hover {
+	background: #74b9ff;
+	transform: scale(1.05);
+  }
+  
+  /* Adjust grid size and center alignment */
+  .grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 15px;
+	width: 35vw; /* Increased size */
+	height: 69vh; /* Increased size */
+	margin-top: 20px;
+	background: #dfe6e9;
+	border-radius: 15px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	padding: 15px; /* Add spacing inside the grid */
+  }
+  
+  /* Square/Holes Styling */
+  .square {
+	width: 10vw;
+	aspect-ratio: 1;
+	background: #55efc4;
+	border: 2px solid #00b894;
+	border-radius: 50%;
+	position: relative;
+	box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s;
+  }
+  
+  .square:hover {
+	transform: scale(1.1);
+  }
+  
+  /* Mole Styling */
+  .mole {
+	background-image: url("https://img.lovepik.com/png/20210817/lovepik-hand-drawn-cartoon-brown-mole-day-elements-png-image_6266856.jpg_wh1200.png");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+  }
+  
+  /* Bonus Mole Styling */
+  .bonus-mole {
+	background-image: url("https://path-to-bonus-mole-image.png");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: 3px solid gold;
+  }
+  
+  /* Hit animation */
+  @keyframes hit {
+	0% { transform: scale(1); }
+	50% { transform: scale(0.8); }
+	100% { transform: scale(1); }
+  }
+  
+  .mole.hit {
+	animation: hit 0.2s ease-out;
+  }
+  

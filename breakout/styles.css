@@ -1,0 +1,96 @@
+body {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  flex-direction: column;
+}
+
+.grid {
+  position: relative;
+  width: 560px;
+  height: 300px;
+  border: solid 2px #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  padding: 3px;
+}
+
+.user {
+  position: absolute;
+  width: 100px;
+  height: 15px;
+  background: #ff6f61;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 111, 97, 0.7);
+}
+
+.block {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  background: #4ecdc4;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(78, 205, 196, 0.7);
+}
+
+.ball {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffcc00;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.7);
+}
+
+.power-up {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ff6f61;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 111, 97, 0.7);
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+      opacity: 0.5;
+  }
+}
+
+#game-over, #you-win {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  background: #ff6f61;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #ff3b2f;
+}

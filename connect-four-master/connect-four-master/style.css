@@ -1,0 +1,87 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 50px);
+  grid-template-rows: repeat(6, 50px);
+  gap: 5px;
+  background-color: #0077b6;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+.grid div {
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s ease-out;
+}
+
+.grid div.taken {
+  cursor: not-allowed;
+}
+
+.grid div.player-one::before,
+.grid div.player-two::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: scale(0.9);
+  transition: transform 0.5s ease-out;
+}
+
+.grid div.player-one::before {
+  background-color: #ff4d4d;
+}
+
+.grid div.player-two::before {
+  background-color: #4d79ff;
+}
+
+#reset, #toggle-ai {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#reset:hover, #toggle-ai:hover {
+  background-color: #005f8a;
+}
+
+#result {
+  color: #333;
+  font-size: 20px;
+  margin: 10px 0;
+}
